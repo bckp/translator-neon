@@ -1,0 +1,8 @@
+/.idea
+/vendor
+/temp
+/composer.lock
+/.php-cs-fixer.cache
+/tests/output
+/coverage.xml
+/coverage.json

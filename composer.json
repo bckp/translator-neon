@@ -1,7 +1,15 @@
 {
     "name": "bckp/translator-neon",
     "description": "Versioned NEON translation source for bckp/translator-core 3",
+    "keywords": ["translator", "neon"],
+    "homepage": "https://github.com/bckp/translator-neon",
     "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Radovan Kepák",
+            "homepage": "https://kepak.dev"
+        }
+    ],
     "require": {
         "php": "^8.4",
         "bckp/translator-core": "^3.0",
@@ -10,6 +18,38 @@
     "autoload": {
         "psr-4": {
             "Bckp\\Translator\\Neon\\": "src/"
+        }
+    },
+    "scripts": {
+        "phpstan": "phpstan analyse",
+        "tests": "tester tests -s",
+        "tests-watch": "tester tests -s -w src",
+        "psalm": "psalm",
+        "phpcs": "php-cs-fixer check --sequential",
+        "phpcs-fix": "php-cs-fixer fix --sequential"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "phpstan/phpstan": "^2.0",
+        "nette/tester": "^2.5",
+        "friendsofphp/php-cs-fixer": "^3.95",
+        "vimeo/psalm": "^6.5"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../translator-core",
+            "options": {
+                "symlink": true,
+                "versions": {
+                    "bckp/translator-core": "3.0.0"
+                }
+            }
+        }
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-nextgen": "1.0.x-dev"
         }
     }
 }
