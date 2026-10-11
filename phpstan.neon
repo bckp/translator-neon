@@ -3,3 +3,4 @@ parameters:
 	phpVersion: 80400
 	paths:
 		- src
+		- tools/check-bc.php

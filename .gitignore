@@ -6,3 +6,5 @@
 /tests/output
 /coverage.xml
 /coverage.json
+/tools/bc/vendor
+/tools/bc/composer.lock

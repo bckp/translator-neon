@@ -1,7 +1,10 @@
 {
     "name": "bckp/translator-neon",
     "description": "Versioned NEON translation source for bckp/translator-core 3",
-    "keywords": ["translator", "neon"],
+    "keywords": [
+        "translator",
+        "neon"
+    ],
     "homepage": "https://github.com/bckp/translator-neon",
     "license": "BSD-3-Clause",
     "authors": [
@@ -26,7 +29,9 @@
         "tests-watch": "tester tests -s -w src",
         "psalm": "psalm",
         "phpcs": "php-cs-fixer check --sequential",
-        "phpcs-fix": "php-cs-fixer fix --sequential"
+        "phpcs-fix": "php-cs-fixer fix --sequential",
+        "bc-install": "composer --working-dir=tools/bc install --no-interaction --no-progress --prefer-dist",
+        "bc-check": "@php tools/check-bc.php 1"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",
