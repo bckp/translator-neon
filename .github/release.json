@@ -1,0 +1,8 @@
+{
+    "tag": "v1.0.0",
+    "name": "NEON Translation Source 1.0.0",
+    "checks": [
+        "Tests",
+        "API compatibility"
+    ]
+}

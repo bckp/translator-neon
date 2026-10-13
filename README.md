@@ -2,15 +2,21 @@
 
 `bckp/translator-neon` implements core 3.x `TranslationSource`. It requires PHP 8.4+ and `nette/neon`; the core itself does not depend on the NEON decoder.
 
-This is the `nextgen` development branch for the first standalone release. Its Composer package name and PHP namespace are unchanged from the original core plugin.
+Version 1.0 is the first standalone release for core 3.x. Its Composer package name and PHP namespace are unchanged from the original core plugin.
+
+## Installation
+
+```sh
+composer require bckp/translator-neon:^1.0
+```
 
 ## Development
 
-Clone this repository and the matching core branch as sibling directories. Composer links the unreleased core through a path repository:
+Clone this repository and the matching core branch (`main`, or `nextgen` during development) as sibling directories. Composer links the unreleased core through a path repository:
 
 ```sh
-git clone --branch nextgen https://github.com/bckp/translator-core.git
-git clone --branch nextgen https://github.com/bckp/translator-neon.git
+git clone --branch main https://github.com/bckp/translator-core.git
+git clone --branch main https://github.com/bckp/translator-neon.git
 cd translator-neon
 COMPOSER_ROOT_VERSION=1.0.x-dev composer install
 composer tests
@@ -108,3 +114,7 @@ The hosted Renovate GitHub App must be enabled for the repository. It discovers 
 ### Mutation testing
 
 Infection is deferred because it does not directly support Nette Tester. Adoption will be considered together with a possible move to PHPUnit.
+
+## Publishing a release
+
+Commit `.github/release.json` and `docs/releases/<tag>.md` with the requested version. The Release workflow publishes only after the request reaches `main` and Tests plus API compatibility succeed on that commit. It leaves existing tags unchanged.
