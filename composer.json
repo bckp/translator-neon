@@ -54,7 +54,8 @@
     ],
     "extra": {
         "branch-alias": {
-            "dev-nextgen": "1.0.x-dev"
+            "dev-nextgen": "1.0.x-dev",
+            "dev-main": "1.0.x-dev"
         }
     }
 }
